@@ -1,26 +1,38 @@
 ﻿body {
 }
-#ProdutoInformacoes{
-    margin-top:50px;
-    height: 500px;
-    width: 70%;
-    background-color: #0094ff
+.imagemProduto {
+    width: 100%;
+    height: 100%
 }
-#ProdutoImagem {
-    height: 30%;
-    width:30%;
+
+.divProduto {
+    height: 500px;
+    width: 1000px;
+    background-color: #00ffff;
+    text-align: left;
+    float: left;
+    margin-left: 25px
+}
+
+.divImagemProduto {
+    height: 40%;
+    width: 30%;
     float: left
 }
-#ProdutoNome {
-    height: 30%;
-    width: 70%;
-    float: left;
-}
-#ProdutoDescricao{
+
+.divTextoProduto {
+    height: 90%;
     width: 100%;
-    height:70%;
+    float: left
 }
-#imagemProduto {
+
+.divButtonProduto {
+    height: 10%;
     width: 100%;
+    float: left
+}
+
+.buttonProduto {
     height: 100%;
+    width: 100%;
 }

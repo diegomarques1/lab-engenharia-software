@@ -71,7 +71,12 @@
     <Content Include="Hme.html" />
     <Content Include="iChurras.sql" />
     <Content Include="Login.aspx" />
+    <Content Include="PedidoResumo.aspx" />
+    <Content Include="Produto.aspx" />
+    <Content Include="ProdutoAdicionado.aspx" />
     <Content Include="style\Home.css" />
+    <Content Include="style\ProdutoAdicionado.css" />
+    <Content Include="style\Produtos.css" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
   </ItemGroup>
@@ -83,6 +88,31 @@
     <Compile Include="Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pedido.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="PedidoResumo.aspx.cs">
+      <DependentUpon>PedidoResumo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PedidoResumo.aspx.designer.cs">
+      <DependentUpon>PedidoResumo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutoAdicionado.aspx.cs">
+      <DependentUpon>ProdutoAdicionado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProdutoAdicionado.aspx.designer.cs">
+      <DependentUpon>ProdutoAdicionado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProdutoGeral.cs" />
+    <Compile Include="Produto.aspx.cs">
+      <DependentUpon>Produto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Produto.aspx.designer.cs">
+      <DependentUpon>Produto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Produto.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ClasseConexao.cs" />
     <Compile Include="Login.aspx.cs">

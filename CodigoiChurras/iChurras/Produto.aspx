@@ -1,24 +1,29 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Produto.aspx.cs" Inherits="iChurras.Produto" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Produto.aspx.cs" Inherits="iChurras.Produto1" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" type="text/css" href="style/Produtos.css"/>
     <title></title>
 </head>
 <body>
-    <div id="ProdutoInformacoes">
-        <div id="ProdutoImagem">
-            <asp:Image ID="ImagemProduto" runat="server" />
+    <form id="form1" runat="server">
+        <div class="divProduto">            
+            <div class="divTextoProduto"> 
+                <div class="divImagemProduto">
+                    <img src="" class="imagemProduto" />
+                </div>
+                <asp:Label ID="LabelNomeProduto" runat="server" Text="Nome Produto"></asp:Label>    
+                <br />
+                <br />
+                <asp:Label ID="LabelDescricaoProduto" runat="server" Text="Descricao"></asp:Label>       
+            </div>
+            <div class="divButtonProduto"> 
+                <asp:Button CssClass="buttonProduto" ID="ButtonProduto2" runat="server" Text="Adicionar ao pedido" OnClick="AdicionarProdutoPedido" />
+            </div>
         </div>
-        <div id="ProdutoNome">
-            <asp:Label ID="LabelNomeProduto" runat="server"></asp:Label>
-        </div>
-        <div id="ProdutoDescricao">
-            <asp:Label ID="LabelDescricaoProduto" runat="server"></asp:Label>
-        </div>
-    </div>
+    </form>
 </body>
 </html>

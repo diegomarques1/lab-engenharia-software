@@ -33,9 +33,9 @@
                 <asp:Button ID="ButtonCadastrar" runat="server" Text="Cadastrar" OnClick="ButtonCadastrar_Click" />
             <br />
                 <asp:Label ID="LabelResposta" runat="server"></asp:Label>
-                <br />
+            <br />
                 <asp:Label ID="LabelNomeCliente" runat="server"></asp:Label>
-                <br />
+            <br />
                 <asp:Label ID="LabelTelefoneCliente" runat="server"></asp:Label>
         </div>
     </form>

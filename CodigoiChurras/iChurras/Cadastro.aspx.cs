@@ -13,7 +13,7 @@ namespace iChurras
         Cliente cliente;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void ButtonCadastrar_Click(object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace iChurras
                 cliente.setEmail(TextBoxEmail.Text);
                 cliente.setSenha(TextBoxSenha.Text);
                 cliente.setTelefone(TextBoxTelefone.Text);
-
+                LabelResposta.Text = "Cadastro concluido!";
             }
             else
             {

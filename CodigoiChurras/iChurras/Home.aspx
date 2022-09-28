@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="style/Home.css"/>
     <title></title>
 </head>
-    <header>        
+<body runat="server">
+<header>        
         <a href="Login.aspx">
             <div id="ButtonLogin">
                 <h4>
@@ -23,26 +24,32 @@
                 </h4>
             </div>
         </a>
-    </header>
-<body>
-    <a>        
+</header>
+<main>
+<form runat="server">
         <div class="divProduto">
-            <div class="divImagemProduto">
+            <div " class="divImagemProduto">                
                 <img src="" class="imagemProduto" />
             </div>
             <div class="divTextoProduto"> 
                 <asp:Label ID="Label1" runat="server" Text="Produto1"></asp:Label>       
-            </div>              
+            </div>
+            <div class="divButtonProduto"> 
+                <asp:Button CssClass="buttonProduto" ID="ButtonProduto1" runat="server" Text="Ver detalhes" OnClick="ButtonProduto1_Click" />
+            </div>
         </div>
-    </a>        
         <div class="divProduto">
             <div class="divImagemProduto">
                 <img src="" class="imagemProduto" />
             </div>
             <div class="divTextoProduto"> 
                 <asp:Label ID="Label2" runat="server" Text="Produto2"></asp:Label>       
-            </div>              
+            </div>
+            <div class="divButtonProduto"> 
+                <asp:Button CssClass="buttonProduto" ID="ButtonProduto2" runat="server" Text="Ver detalhes" OnClick="ButtonProduto2_Click" />
+            </div>
         </div>
-    <asp:GridView ID="GridView1" runat="server" Height="16px" Visible="False" Width="16px"></asp:GridView>
+</form>
+</main>
 </body>
 </html>

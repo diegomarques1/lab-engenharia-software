@@ -49,6 +49,7 @@ CodProduto int not null foreign key references tblProdutos(CodProduto),
 Quantidade int
 )
 
+
 CREATE INDEX XtblClientes ON tblClientes(CodCliente)
 CREATE INDEX XtblProdutos ON tblProdutos(CodProduto)
 CREATE INDEX XtblPedidos ON tblPedidos(CodPedidos)
@@ -80,6 +81,8 @@ select * from tblProdutos
 
 select * from tblClientes
 
+select NomeProduto from tblProdutos
+
 GO
 CREATE PROCEDURE usp_aspLogin
 	@ClienteASP varchar(50),
@@ -95,7 +98,7 @@ AS
 
 	IF(@SenhaASP = @getSenha)
 		BEGIN
-			SELECT * from tblClientes where CodCliente = @getCodCliente
+			SELECT CodCliente,Nome,email,telefone from tblClientes where CodCliente = @getCodCliente
 		END
 	ELSE
 		BEGIN
@@ -110,5 +113,7 @@ select * from tblProdutos where CodProduto = '20' or NomeProduto like '%20%' or 
 update tblProdutos set Preco = $50.00 where CodProduto = 5	
 
 update tblProdutos set NomeProduto = 'Macarrão' where CodProduto = 1 
+
+delete from tblClientes where Nome = 'Júlio César'
 
 select * from tblPedidos where CodPedidos = 6 or CodMesa = 6 or CodFunc = 6

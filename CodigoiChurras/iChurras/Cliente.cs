@@ -8,11 +8,11 @@ namespace iChurras
     
     public class Cliente
     {
-        private int codCliente;
-        private String nome, loginCliente, senha, email, telefone;
-        public void setCodCliente(int codCliente)
+        private static int codCliente;
+        private static String nomeCliente, loginCliente, senhaCliente, emailCliente, telefoneCliente;
+        public void setCodCliente(int codigo)
         {
-            this.codCliente = codCliente;
+            codCliente = codigo;
         }
         public int getCodCliente()
         {
@@ -20,15 +20,15 @@ namespace iChurras
         }
         public void setNome(String nome)
         {
-            this.nome = nome;
+            nomeCliente = nome;
         }
         public String getNome()
         {
-            return nome;
+            return nomeCliente;
         }
-        public void setLoginCliente(String loginCliente)
+        public void setLoginCliente(String login)
         {
-            this.loginCliente = loginCliente;
+            loginCliente = login;
         }
         public String getLoginCliente()
         {
@@ -36,27 +36,27 @@ namespace iChurras
         }
         public void setSenha(String senha)
         {
-            this.senha = senha;
+            senhaCliente = senha;
         }
         public String getSenha()
         {
-            return senha;
+            return senhaCliente;
         }
         public void setEmail(String email)
         {
-            this.email = email;
+            emailCliente = email;
         }
         public String getEmail()
         {
-            return email;
+            return emailCliente;
         }
         public void setTelefone(String telefone)
         {
-            this.telefone = telefone;
+            telefoneCliente = telefone;
         }
         public String getTelefone()
         {
-            return telefone;
+            return telefoneCliente;
         }
     }
 }

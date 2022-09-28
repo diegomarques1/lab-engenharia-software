@@ -42,8 +42,7 @@ namespace iChurras
                     cliente.setCodCliente(Convert.ToInt32(GridView1.Rows[0].Cells[0].Text));
                     cliente.setNome(GridView1.Rows[0].Cells[1].Text.ToString());
                     cliente.setEmail(GridView1.Rows[0].Cells[2].Text.ToString());
-                    cliente.setSenha(GridView1.Rows[0].Cells[3].Text.ToString());
-                    cliente.setTelefone(GridView1.Rows[0].Cells[4].Text.ToString());
+                    cliente.setTelefone(GridView1.Rows[0].Cells[3].Text.ToString());
                 }
             }
         }

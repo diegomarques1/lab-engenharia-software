@@ -11,43 +11,34 @@ namespace iChurras
 {
 
 
-    public partial class WebForm1
+    public partial class ProdutoAdicionado
     {
 
         /// <summary>
-        /// Controle Label1.
+        /// Controle form1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle ButtonProduto1.
+        /// Controle ButtonResumo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonProduto1;
+        protected global::System.Web.UI.WebControls.Button ButtonResumo;
 
         /// <summary>
-        /// Controle Label2.
+        /// Controle ButtonVoltar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-
-        /// <summary>
-        /// Controle ButtonProduto2.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonProduto2;
+        protected global::System.Web.UI.WebControls.Button ButtonVoltar;
     }
 }

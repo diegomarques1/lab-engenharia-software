@@ -1,0 +1,38 @@
+﻿body {
+}
+.imagemProduto {
+    width: 100%;
+    height: 100%
+}
+
+.divProduto {
+    height: 500px;
+    width: 1000px;
+    background-color: #00ffff;
+    text-align: left;
+    float: left;
+    margin-left: 25px
+}
+
+.divImagemProduto {
+    height: 40%;
+    width: 30%;
+    float: left
+}
+
+.divTextoProduto {
+    height: 90%;
+    width: 100%;
+    float: left
+}
+
+.divButtonProduto {
+    height: 10%;
+    width: 100%;
+    float: left
+}
+
+.buttonProduto {
+    height: 100%;
+    width: 100%;
+}

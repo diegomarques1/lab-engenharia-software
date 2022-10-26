@@ -49,7 +49,7 @@ namespace iChurras
             if (RadioButtonListEndereco.Items.Count != 0)
             {
                 DirectionsRequest request = new DirectionsRequest();
-                request.Key = "AIzaSyAmzqwp9ceYAUTA7MLaS7s8PQWthABxurU";
+                request.Key = "YOUR_KEY";
                 request.Origin = new LocationEx(new Address("R. da Consolação, 1272"));
                 request.Destination = new LocationEx(new Address(RadioButtonListEndereco.SelectedValue));
                 request.TravelMode = GoogleApi.Entities.Maps.Common.Enums.TravelMode.Bicycling;

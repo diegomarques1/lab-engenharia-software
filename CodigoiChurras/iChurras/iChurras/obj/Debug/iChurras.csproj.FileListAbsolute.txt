@@ -1,7 +1,0 @@
-C:\Users\Júlio César\Documents\Visual Studio\iChurras\iChurras\obj\Debug\iChurras.csproj.AssemblyReference.cache
-C:\Users\Júlio César\Documents\Visual Studio\iChurras\iChurras\obj\Debug\iChurras.csproj.CoreCompileInputs.cache
-C:\Users\Júlio César\Documents\Visual Studio\iChurras\iChurras\bin\iChurras.dll.config
-C:\Users\Júlio César\Documents\Visual Studio\iChurras\iChurras\bin\iChurras.dll
-C:\Users\Júlio César\Documents\Visual Studio\iChurras\iChurras\bin\iChurras.pdb
-C:\Users\Júlio César\Documents\Visual Studio\iChurras\iChurras\obj\Debug\iChurras.dll
-C:\Users\Júlio César\Documents\Visual Studio\iChurras\iChurras\obj\Debug\iChurras.pdb

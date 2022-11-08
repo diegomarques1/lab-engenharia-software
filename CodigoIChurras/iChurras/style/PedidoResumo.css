@@ -1,0 +1,38 @@
+﻿*{
+    margin: 0 auto
+}
+body {
+}
+#divPedido {
+    width: 90%;
+    height: 650px;
+    background-color: #00ffff;
+}
+#buttonProduto{
+
+}
+#divListaProdutos{
+    width: 100%;
+    height: 50%;
+    float: left
+}
+#divPreco {
+    width: 100%;
+    height: 50%;
+    float: left
+}
+#divEndereco{
+    width: 50%;
+    height: 80%;
+    float: left
+}
+#divPagamento {
+    width: 100%;
+    height: 20%;
+    float: left
+}
+#div1 {
+    width: 50%;
+    height: 80%;
+    float: left
+}

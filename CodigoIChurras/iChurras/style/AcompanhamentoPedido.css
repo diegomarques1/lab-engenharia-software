@@ -1,0 +1,28 @@
+﻿* {
+    margin: 0 auto
+}
+body {
+}
+#divPrincipal {
+    width: 90%;
+    height: 600px;
+    background-color: #00ffff
+}
+#divInformacoes{
+    width: 50%;
+    height: 85%;
+    float: left
+}
+#divResumo {
+    width: 50%;
+    height: 60%;
+    float: left
+}
+#PHProdutos {
+    margin: 30px
+}
+#divAvaliacao{
+    height: 25%;
+    width: 50%;
+    float: left
+}

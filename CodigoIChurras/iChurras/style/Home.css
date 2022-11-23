@@ -25,7 +25,8 @@ header{
     background-color: #00ffff;
     text-align: left;
     float: left;
-    margin-left: 25px
+    margin-left: 25px;
+    margin-bottom: 25px
 }
 .divImagemProduto {
     height: 100%;

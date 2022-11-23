@@ -12,53 +12,85 @@ namespace iChurras
     {
         ClasseConexao con;
         DataSet dataset;
+        Cliente cliente;
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView gv = new GridView();
+            cliente = new Cliente();
             con = new ClasseConexao();
             dataset = new DataSet();
-            String comando = "select NomeProduto from tblProdutos";
+            String comando;
+            Button b;
+            Label l;
+            if (cliente.isLogged())
+            {
+                PHProdutos.Controls.Add(new LiteralControl("<h2> Favoritos </h2>"));
+                PHProdutos.Controls.Add(new LiteralControl("<div style=\"width: 100%; float: inline-start\">"));
+                comando = "select NomeProduto from tblProdutos inner join tblProdutosFavoritos on tblProdutos.CodProduto = tblProdutosFavoritos.CodProduto where tblProdutosFavoritos.CodCliente = " + cliente.getCodCliente();
+                dataset = con.retornarSQL(comando);
+                for (int i = 0; i < dataset.Tables[0].Rows.Count; i++)
+                {
+                    b = new Button();
+                    b.Text = "Ver detalhes";
+                    b.ID = dataset.Tables[0].Rows[i].ItemArray[0].ToString();
+                    b.CssClass = "buttonProduto";
+                    b.Click += new EventHandler(this.ButtonProduto_Click);
+                    l = new Label();
+                    l.Text = b.ID;
+                    PHProdutos.Controls.Add(new LiteralControl("<div class=\"divProduto\">"));
+                    PHProdutos.Controls.Add(new LiteralControl("<div class=\"divImagemProduto\">"));
+                    PHProdutos.Controls.Add(new LiteralControl("<img src=\"\" class=\"imagemProduto\" />"));
+                    PHProdutos.Controls.Add(new LiteralControl("</div>"));
+                    PHProdutos.Controls.Add(new LiteralControl("<div class=\"divTextoProduto\">"));
+                    PHProdutos.Controls.Add(l);
+                    PHProdutos.Controls.Add(new LiteralControl("</div>"));
+                    PHProdutos.Controls.Add(new LiteralControl("<div class=\"divButtonProduto\">"));
+                    PHProdutos.Controls.Add(b);
+                    PHProdutos.Controls.Add(new LiteralControl("</div>"));
+                    PHProdutos.Controls.Add(new LiteralControl("</div>"));
+                }
+                PHProdutos.Controls.Add(new LiteralControl("</div>"));
+            }
+            PHProdutos.Controls.Add(new LiteralControl("<div style=\"width: 100%; float: inline-end\">"));
+            comando = "select NomeProduto from tblProdutos";
             dataset = con.retornarSQL(comando);
-            gv.DataSource = dataset;
-            gv.DataBind();
-            Label1.Text = gv.Rows[0].Cells[0].Text;
-            Label2.Text = gv.Rows[1].Cells[0].Text;
+            PHProdutos.Controls.Add(new LiteralControl("<h2> Cardapio </h2>"));
+            for (int  i = 0; i < dataset.Tables[0].Rows.Count; i++)
+            {
+                b = new Button();
+                b.Text = "Ver detalhes";
+                b.ID = dataset.Tables[0].Rows[i].ItemArray[0].ToString();
+                b.CssClass = "buttonProduto";
+                b.Click += new EventHandler(this.ButtonProduto_Click);
+                l = new Label();
+                l.Text = b.ID;
+                PHProdutos.Controls.Add(new LiteralControl("<div class=\"divProduto\">"));
+                PHProdutos.Controls.Add(new LiteralControl("<div class=\"divImagemProduto\">"));
+                PHProdutos.Controls.Add(new LiteralControl("<img src=\"\" class=\"imagemProduto\" />"));
+                PHProdutos.Controls.Add(new LiteralControl("</div>"));
+                PHProdutos.Controls.Add(new LiteralControl("<div class=\"divTextoProduto\">"));
+                PHProdutos.Controls.Add(l);
+                PHProdutos.Controls.Add(new LiteralControl("</div>"));
+                PHProdutos.Controls.Add(new LiteralControl("<div class=\"divButtonProduto\">"));
+                PHProdutos.Controls.Add(b);
+                PHProdutos.Controls.Add(new LiteralControl("</div>"));
+                PHProdutos.Controls.Add(new LiteralControl("</div>"));
+            }
+            PHProdutos.Controls.Add(new LiteralControl("</div>"));
         }
 
-        protected void ButtonProduto1_Click(object sender, EventArgs e)
+        protected void ButtonProduto_Click(object sender, EventArgs e)
         {
             ProdutoGeral produtoGeral = new ProdutoGeral();
-            GridView gv = new GridView();
             con = new ClasseConexao();
             dataset = new DataSet();
-            String comando = "select * from tblProdutos where NomeProduto = '" + Label1.Text+ "'";
+            String comando = "select * from tblProdutos where CodProduto = '" + ((Button)sender).ID + "'";
             dataset = con.retornarSQL(comando);
-            gv.DataSource = dataset;
-            gv.DataBind();
-            produtoGeral.setCodProduto(Convert.ToInt32(gv.Rows[0].Cells[0].Text));
-            produtoGeral.setNomeProduto(gv.Rows[0].Cells[1].Text);
-            produtoGeral.setPrecoProduto(float.Parse(gv.Rows[0].Cells[2].Text));
-            produtoGeral.setDescricaoProduto(gv.Rows[0].Cells[3].Text);
-            produtoGeral.setTipoProduto(Convert.ToInt32(gv.Rows[0].Cells[4].Text));
+            produtoGeral.setCodProduto(Convert.ToInt32(dataset.Tables[0].Rows[0].ItemArray[0].ToString()));
+            produtoGeral.setNomeProduto(dataset.Tables[0].Rows[0].ItemArray[1].ToString());
+            produtoGeral.setPrecoProduto(float.Parse(dataset.Tables[0].Rows[0].ItemArray[2].ToString()));
+            produtoGeral.setDescricaoProduto(dataset.Tables[0].Rows[0].ItemArray[3].ToString());
+            produtoGeral.setTipoProduto(Convert.ToInt32(dataset.Tables[0].Rows[0].ItemArray[4].ToString()));
             HttpContext.Current.Response.Redirect("Produto.aspx");
-        }
-
-        protected void ButtonProduto2_Click(object sender, EventArgs e)
-        {
-            ProdutoGeral produtoGeral = new ProdutoGeral();
-            GridView gv = new GridView();
-            con = new ClasseConexao();
-            dataset = new DataSet();
-            String comando = "select * from tblProdutos where NomeProduto = '" + Label2.Text + "'";
-            dataset = con.retornarSQL(comando);
-            gv.DataSource = dataset;
-            gv.DataBind();
-            produtoGeral.setCodProduto(Convert.ToInt32(gv.Rows[0].Cells[0].Text));
-            produtoGeral.setNomeProduto(gv.Rows[0].Cells[1].Text);
-            produtoGeral.setPrecoProduto(float.Parse(gv.Rows[0].Cells[2].Text));
-            produtoGeral.setDescricaoProduto(gv.Rows[0].Cells[3].Text);
-            produtoGeral.setTipoProduto(Convert.ToInt32(gv.Rows[0].Cells[4].Text));
-            HttpContext.Current.Response.Redirect("Produto.aspx");
-        }
+        }        
     }
 }

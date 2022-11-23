@@ -27,29 +27,11 @@
 </header>
 <main>
 <form runat="server" id="form1">
-        <div class="divProduto">
-            <div " class="divImagemProduto">                
-                <img src="" class="imagemProduto" />
-            </div>
-            <div class="divTextoProduto"> 
-                <asp:Label ID="Label1" runat="server" Text="Produto1"></asp:Label>       
-            </div>
-            <div class="divButtonProduto"> 
-                <asp:Button CssClass="buttonProduto" ID="ButtonProduto1" runat="server" Text="Ver detalhes" OnClick="ButtonProduto1_Click" />
-            </div>
-        </div>
-        <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
-        <div class="divProduto">
-            <div class="divImagemProduto">
-                <img src="" class="imagemProduto" />
-            </div>
-            <div class="divTextoProduto"> 
-                <asp:Label ID="Label2" runat="server" Text="Produto2"></asp:Label>       
-            </div>
-            <div class="divButtonProduto"> 
-                <asp:Button CssClass="buttonProduto" ID="ButtonProduto2" runat="server" Text="Ver detalhes" OnClick="ButtonProduto2_Click" />
-            </div>
-        </div>
+    <asp:PlaceHolder ID="PHProdutos" runat="server">
+
+
+    </asp:PlaceHolder>
+           
 </form>
 </main>
 </body>
